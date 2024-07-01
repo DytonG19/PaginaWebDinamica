@@ -1,8 +1,8 @@
 import pyodbc
-server='DYTON\SQLEXPRESS'
-database ='OrdenesCompra'
-usuario= 'ComprasCRUD'
-contrasenya='Dylan1209'
+server=''
+database =''
+usuario= ''
+contrasenya=''
 def Conectar():
     try:
         Conexion = pyodbc.connect('DRIVER={SQL SERVER};SERVER='+server+';DATABASE='+database+';UID='+usuario+';PWD='+contrasenya)
@@ -16,9 +16,9 @@ import cx_Oracle
 def ConectarOracle():
     try:
         connection = cx_Oracle.connect(
-            user='ComprasCRUD',
-            password='Dyton1209',
-            dsn='localhost:1521/XE',
+            user='',
+            password='',
+            dsn='',
             encoding='UTF-8'
         )
         return connection
