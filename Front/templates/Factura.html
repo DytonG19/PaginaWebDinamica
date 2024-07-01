@@ -1,0 +1,52 @@
+<div class="page-container">Page of</div>
+<table class="invoice-info-container">
+<tbody>
+<tr>
+<td class="client-name" rowspan="2">{{client_name}}</td>
+<td>DytonTech</td>
+</tr>
+<tr>
+<td>La Antigua Guatemala</td>
+</tr>
+<tr>
+<td>Fecha Recibo: <strong>{{today_date}}</strong></td>
+<td>Sacatepéquez,Guatemala</td>
+</tr>
+<tr>
+<td>Recibo No: <strong>{{ numfac }}</strong></td>
+<td>Atendido por:  <strong>{{ empleado }}</strong></td>
+</tr>
+</tbody>
+</table>
+<table class="line-items-container">
+<thead>
+<tr>
+<th class="heading-quantity">&nbsp;</th>
+<th class="heading-description">Descripcion</th>
+<th class="heading-price">&nbsp;</th>
+<th class="heading-subtotal">Subtotal</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<table class="line-items-container has-bottom-border">
+<thead>
+<tr>
+<th>Info de pago</th>
+<th>Total a pagar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="payment-info">
+<div>Tarjeta No: <strong>XXXXXXXXXXXX{{ Tarjeta }}</strong></div>
+</td>
+<td class="large total">{{total}}</td>
+</tr>
+</tbody>
+</table>
+<div class="footer">
+<div class="footer-info">help@dytontech.com | +502 12345678 | dytontech.com</div>
+<div class="footer-thanks"><img src="https://github.com/anvilco/html-pdf-invoice-template/raw/main/img/heart.png" alt="heart" />Gracias por su compra!!</div>
+</div>

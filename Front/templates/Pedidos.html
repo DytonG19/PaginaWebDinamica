@@ -1,0 +1,14 @@
+{% extends './base.html' %}
+{% block title %}Auditoria{% endblock %}
+{% block customCSS %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Auditoria.css') }}">
+{% endblock %}
+{% block body %}
+    <a class="back-button" href="/home">&#8592; Volver a Inicio</a>
+ {% if html_table %}
+        {{ html_table|safe }}
+    {% else %}
+        <p>No se encontraron resultados en la consulta.</p>
+    {% endif %}
+{{descargar}}
+{% endblock %}

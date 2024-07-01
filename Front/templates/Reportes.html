@@ -1,0 +1,23 @@
+{% extends './base.html' %}
+{% block title %}Reportes{% endblock %}
+{% block customCSS %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Auditoria.css') }}">
+{% endblock %}
+{% block body %}
+<form action='/ReporteVentas' method='POST'>
+    <button class="back-button" type="submit" name='boton' value='1'>&#8593; Ver mayor venta por fecha</button>
+    <button class="back-button" type="submit" name='boton' value='2'>&#8593; Ver mayor venta por categoría</button>
+    <button class="back-button" type="submit" name='boton' value='3'>&#8595; Ver menor venta por fecha</button>
+    <button class="back-button" type="submit" name='boton' value='4'>&#8595; Ver menor venta por categoría</button>
+</form>
+
+{% if html_table %}
+        {{ html_table|safe }}
+    {% else %}
+        <p>No se encontraron resultados en la consulta.</p>
+    {% endif %}
+ <form action="/descargar_excel" method="get">
+        <button class="back-button" type="submit">Descargar Informe</button>
+    </form>
+<a class="back-button" href="/home">&#8592; Volver a Inicio</a>
+{% endblock %}

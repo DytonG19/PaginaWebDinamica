@@ -1,0 +1,19 @@
+{% extends './base.html' %}
+{% block title %}Editar Mercaderia{% endblock %}
+{% block customCSS %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Auditoria.css') }}">
+{% endblock %}
+{% block body %}
+<form class="form-signin" action="/EditarM" method="POST">
+<div class="input-group-append">
+  <input type="text" class="form-control" id="buscar" name="buscar" placeholder="ID del Producto">
+    <button class="btn btn-outline-secondary" type="submit" >Editar</button>
+  </div>
+</form>
+ {% if html_table %}
+        {{ html_table|safe }}
+    {% else %}
+        <p>No se encontraron resultados en la consulta.</p>
+    {% endif %}
+    <a class="back-button" href="/home">&#8592; Volver a Inicio</a>
+{% endblock %}

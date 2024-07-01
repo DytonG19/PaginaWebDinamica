@@ -1,0 +1,91 @@
+/* Estilo para la barra de menú */
+.menu {
+    background-color: #888; /* Color de fondo gris */
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+/* Estilo para el contenedor de botones y listas */
+.menu-button-container {
+    text-align: center;
+    position: relative; /* Añadir posición relativa */
+}
+
+/* Estilo para los botones del menú */
+.menu-button {
+    background-color: #555; /* Color de fondo gris oscuro para los botones */
+    color: #fff; /* Texto en color blanco */
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px; /* Espacio entre los botones y las listas */
+}
+
+/* Estilo para las listas desplegables */
+.menu-list {
+    display: none; /* Ocultar la lista por defecto */
+    list-style-type: none; /* Quitar viñetas de la lista */
+    background-color: #555; /* Color de fondo gris oscuro para la lista */
+    padding: 0;
+    margin: 0;
+    position: absolute; /* Añadir posición absoluta */
+    top: 100%; /* Colocar la lista debajo del botón */
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Agregar una transición de desvanecimiento */
+}
+
+.menu-list li {
+    padding: 10px;
+}
+
+/* Estilo para los enlaces dentro de la lista */
+.menu-list a {
+    text-decoration: none;
+    color: #fff; /* Texto en color blanco */
+}
+
+/* Estilo para mostrar la lista cuando el botón está en estado 'open' */
+.menu-button.open + .menu-list {
+    display: block;
+    opacity: 1; /* Mostrar con opacidad completa */
+}
+.menu-button {
+    /* ... otros estilos ... */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.menu-button:hover {
+    background-color: #333; /* Cambiar a un color más oscuro al pasar el mouse */
+    transform: scale(1.05); /* Escalar ligeramente el botón al pasar el mouse */
+}
+.menu-list {
+    /* ... otros estilos ... */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out; /* Agregar una transición de desvanecimiento */
+}
+
+.menu-button.open + .menu-list {
+    /* ... otros estilos ... */
+    opacity: 1; /* Mostrar con opacidad completa */
+}
+/* Agrega una clase para mostrar las listas */
+.menu-list.open {
+    display: block;
+    opacity: 1;
+}
+/* Estilos para el botón de flecha hacia atrás */
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #555;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.back-button:hover {
+    background-color: #555;
+}

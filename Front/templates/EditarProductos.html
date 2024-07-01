@@ -1,0 +1,19 @@
+{% extends './base.html' %}
+{% block title %}Mercaderia{% endblock %}
+{% block customCSS %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Form.css') }}">
+{% endblock %}
+{% block body %}
+<form class="form" action="/EditarProductos" method="POST">
+  <h2>Mercaderia</h2>
+  <p type="Nombre:"><input id="NombreE" name="NombreE" placeholder="Nombre del Producto" value="{{ datos.Nombre }}"></p>
+  <p type="Descripcion:"><input id="Descripcion" name="Descripcion" placeholder="Descripcion del Producto"value="{{ datos.Des }}"></p>
+  <p type="Precio:"><input id="Precio" name="Precio" placeholder="Precio del Producto Ej: 1.99" value="{{ datos.precio }}"></p>
+  <p type="Categoria:"><input id="Categoria" name="Categoria" placeholder="Categoria del producto"value="{{ datos.Categoria }}"></p>
+  <button type="submit" name="guardar" id ="guardar">Guardar</button>
+</form>
+
+ <div>
+  <a class="back-button" href="/EditarM">&#8592; Volver a Inicio</a>
+</div>
+{% endblock %}

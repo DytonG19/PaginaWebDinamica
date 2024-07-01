@@ -1,0 +1,16 @@
+{% extends './base.html' %}
+{% block title %}{{ titulo }}{% endblock %}
+{% block customCSS %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Auditoria.css') }}">
+{% endblock %}
+{% block body %}
+<form action='/home' method='POST'>
+    <button class='back-button' type='submit' name='Regresar'>&#8592;Regresar al menu</button>
+</form>
+
+ {% if html_table %}
+        {{ html_table|safe }}
+    {% else %}
+        <p>No se encontraron resultados en la consulta.</p>
+    {% endif %}
+{% endblock %}

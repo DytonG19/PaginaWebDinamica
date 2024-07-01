@@ -1,0 +1,19 @@
+{% extends './base.html' %}
+{% block title %}Mercaderia{% endblock %}
+{% block customCSS %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Form.css') }}">
+{% endblock %}
+{% block body %}
+<form class="form" action="/AgregarM" method="POST">
+  <h2>Mercaderia</h2>
+  <p type="Nombre:"><input id="Nombre" name="Nombre" placeholder="Nombre del Producto"></p>
+  <p type="Descripcion:"><input id="Descripcion" name="Descripcion" placeholder="Descripcion del Producto"></p>
+  <p type="Precio:"><input id="Precio" name="Precio" placeholder="Precio del Producto Ej: 1.99"></p>
+  <p type="Categoria:"><input id="Categoria" name="Categoria" placeholder="Categoria del producto"></p>
+  <button type="submit">Guardar</button>
+</form>
+
+ <div>
+  <a class="back-button" href="/home">&#8592; Volver a Inicio</a>
+</div>
+{% endblock %}
