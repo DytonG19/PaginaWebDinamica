@@ -1,5 +1,5 @@
 class config:
-    SECRET_KEY = 'B!1w8NAt1T^%kvhUI*S^'
+    SECRET_KEY = ''
 
 class DevelopmentConfig(config):
     DEBUG = True
